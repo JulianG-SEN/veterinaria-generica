@@ -1,0 +1,32 @@
+﻿Issue Id,Issue Type,Summary,Description,Priority,Parent,Labels
+1,Epic,Gestión del proyecto y repositorio,"Configuración de Jira, Git y flujo de trabajo del equipo.",Medium,,
+2,Epic,Diseño de la base de datos,"Modelo entidad-relación, script SQL y datos iniciales.",Medium,,
+3,Epic,Módulo de Clientes,CRUD de dueños de mascotas.,Medium,,
+4,Epic,Módulo de Mascotas,"CRUD de mascotas, especies y razas.",Medium,,
+5,Epic,Módulo de Citas,Agenda de citas y servicios de la veterinaria.,Medium,,
+6,Epic,Historia clínica y vacunación,Registro clínico y carné de vacunación.,Medium,,
+7,Epic,Usuarios y seguridad,"Usuarios del sistema, roles y autenticación.",Medium,,
+8,Epic,Pruebas y documentación,"Pruebas de la API, Swagger e informe técnico.",Medium,,
+101,Story,Crear proyecto en Jira y tablero Scrum,"Crear cuenta en Jira, proyecto 'VET' con tablero Scrum y columnas Por hacer / En progreso / En revisión / Hecho.",High,1,veterinaria
+102,Story,Crear repositorio Git y rama develop,"Inicializar repositorio, subir proyecto base, crear ramas main y develop, agregar .gitignore y README.",High,1,veterinaria
+103,Story,Definir flujo de ramas y convención de commits,Documentar flujo feature/* -> develop -> main y formato de commits con la clave de Jira (VET-n).,Medium,1,veterinaria
+104,Story,Diseñar modelo entidad-relación,"Diagrama ER con 13 tablas: catálogos, personas, mascotas, citas, historia clínica y vacunación.",High,2,veterinaria
+105,Story,Crear script SQL VeterinariaGenerica.sql,"Script de creación de tablas, llaves foráneas, restricciones y datos iniciales.",High,2,veterinaria
+106,Story,Configurar conexión a la base de datos,Configurar application.properties con H2 en modo MySQL y perfil para MySQL.,Medium,2,veterinaria
+107,Story,"Entidad, repositorio y servicio de Cliente",Crear modelo Cliente con validaciones y capas repositorio/servicio.,High,3,veterinaria
+108,Story,API REST CRUD de Clientes,Endpoints GET/POST/PUT/DELETE en /api/clientes con validación de documento y email únicos.,High,3,veterinaria
+109,Story,Catálogos de especie y raza,Endpoints de consulta de especies y razas (por especie).,Medium,4,veterinaria
+110,Story,API REST CRUD de Mascotas,"Registrar, consultar, editar y desactivar mascotas asociadas a un cliente.",High,4,veterinaria
+111,Story,Consultar mascotas de un cliente,Endpoint que lista las mascotas de un cliente.,Medium,4,veterinaria
+112,Story,Catálogo de servicios,CRUD de servicios con precio y duración.,Medium,5,veterinaria
+113,Story,Agendar cita,Crear cita validando que el veterinario no tenga otra cita a la misma hora.,High,5,veterinaria
+114,Story,Cambiar estado de una cita,"Confirmar, cancelar o marcar como atendida una cita.",Medium,5,veterinaria
+115,Story,Consultar agenda por veterinario y fecha,Listar citas de un veterinario en una fecha dada.,Medium,5,veterinaria
+116,Story,Registrar historia clínica,"Registrar diagnóstico y tratamiento de una mascota, opcionalmente ligado a una cita.",High,6,veterinaria
+117,Story,Consultar historia clínica de una mascota,Listar el historial ordenado por fecha.,Medium,6,veterinaria
+118,Story,Registrar y consultar vacunación,Carné de vacunas con fecha de aplicación y próxima dosis.,Medium,6,veterinaria
+119,Story,CRUD de usuarios y roles,"Gestión de usuarios del personal con roles Administrador, Veterinario y Recepcionista.",High,7,veterinaria
+120,Story,Autenticación y cifrado de contraseña,Login y almacenamiento de contraseñas con BCrypt.,High,7,veterinaria
+121,Story,Documentar API con Swagger,Anotaciones OpenAPI en todos los controladores.,Medium,8,veterinaria
+122,Story,Pruebas de endpoints con script test_api.js,Adaptar el script de pruebas al dominio de la veterinaria y guardar resultados.,Medium,8,veterinaria
+123,Story,Informe técnico final,"Informe con arquitectura, esquema de BD, endpoints y evidencia de pruebas.",Medium,8,veterinaria
